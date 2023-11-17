@@ -7,11 +7,8 @@ class ImageBase64Serilizer(serializers.ModelSerializer):
     class Meta:
         model = Image
         fields = ["id","image"]
-        # fields = ["title", "content", "image"]
 
 class ClassifiedImageSerializer(serializers.ModelSerializer):
-    # image = Base64ImageField(required=False)
-    # score = serializers.DecimalField(required=False)
     class Meta:
         model = ClassifiedImage
         fields = ["id", "category", "score"]
